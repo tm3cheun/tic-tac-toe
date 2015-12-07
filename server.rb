@@ -114,11 +114,7 @@ class Board
   end
   
   def game_won?
-    return true if diagonal_win_1? #/
-    return true if diagonal_win_2? #\
-    return true if horizontal_win?
-    return true if vertical_win?
-    return false
+    return diagonal_win_1? or diagonal_win_2? or horizontal_win? or vertical_win?
   end
 end
 
